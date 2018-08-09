@@ -364,6 +364,7 @@ define([
         show_comments_button.click(
             function() {
                 IPython.CellToolbar.activate_preset('Enable Comments');
+                IPython.CellToolbar.global_show()
                 var cells = IPython.notebook.get_cells();
                 if ($('.qtip:visible').length < 2) {
                     for (var i in cells) {
