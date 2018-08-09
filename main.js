@@ -386,6 +386,7 @@ define([
     if (authorization.is_authorized()) {
         var username = authorization.get_username();
         authorization.show_user_widget(username);
+        authorization.save_commenter(username);
     } else {
         authorization.show_user_login_widget();
     }
